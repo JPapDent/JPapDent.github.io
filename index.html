@@ -4,10 +4,24 @@
     <meta charset="utf-8">
     <title>Jamie Papworth-Dent</title>
     <meta property="og:title" content="Jamie Papworth-Dent – Some Things">
+    <!-- 1. Load KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+
+    <!-- 2. Load KaTeX JavaScript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+
+    <!-- 3. Load Auto-render extension (optional, but recommended for automatic parsing) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
   </head>
   <body>
     <header></header>
-    <main>This is the main text.</main>
+    <main>
+    This is some inline maths: $a=\frac{b}{c}$. This is some display maths:
+    $$
+    \int_{-\infty}^\inftye^{-x^2}dx=\sqrt{\pi}
+    $$
+    </main>
     <footer></footer>
   </body>
 </html>
