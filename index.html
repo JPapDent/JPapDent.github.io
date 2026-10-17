@@ -13,13 +13,27 @@
     <!-- 3. Load Auto-render extension (optional, but recommended for automatic parsing) -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                throwOnError: false
+            });
+        });
+    </script>
   </head>
+
   <body>
     <header></header>
     <main>
-    This is some inline maths: $a=\frac{b}{c}$. This is some display maths:
+    <p>This is some inline maths: $a=\frac{b}{c}$. This is some display maths:</p>
     $$
-    \int_{-\infty}^\inftye^{-x^2}dx=\sqrt{\pi}
+    \int_{-\infty}^\infty e^{-x^2}dx=\sqrt{\pi}
     $$
     </main>
     <footer></footer>
