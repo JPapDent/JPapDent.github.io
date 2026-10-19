@@ -26,16 +26,39 @@
             });
         });
     </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+    </style>
   </head>
 
   <body>
-    <header></header>
-    <main>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
     <p>This is some inline maths: $a=\frac{b}{c}$. This is some display maths:</p>
     $$
     \int_{-\infty}^\infty e^{-x^2}dx=\sqrt{\pi}
     $$
-    </main>
-    <footer></footer>
   </body>
 </html>
