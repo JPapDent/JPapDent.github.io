@@ -1,13 +1,13 @@
 :root {
-  --bg: #e0e4e8;
-  --nav: #100830;
-  --navh: #181840;
-  --bbdr: #000;
-  --bbdrh: #000;
-  --bbg: #fff;
-  --bbgh: #f8f8fc;
-  --btxt: #333;
-  --bshdw: #448;
+  --hue: 235;
+  --bg: hsla(var(--hue),10%,100%,1);
+  --nav: hsla(var(--hue),100%,10%,1);
+  --navh: hsla(var(--hue),40%,40%,1);
+  --bbdr: hsla(var(--hue),0%,0%,1);
+  --bbdrh: hsla(var(--hue),0%,0%,1);
+  --bbg: hsla(var(--hue),0%,100%,1);
+  --bbgh: hsla(var(--hue),40%,95%,1);
+  --btxt: hsla(var(--hue),0%,30%,1);
 
 
 body {
@@ -73,7 +73,7 @@ nav a:hover {
 .list-item:hover {
   border-color: var(--bbdrh);
   background-color: var(--bbgh);
-  box-shadow: inset 0 0 0 1px var(--bbdrh), 0 0 6px var(--bshdw);
+  box-shadow: inset 0 0 0 0px var(--bbdrh), 0 0 0px 0.5px var(--bbdrh);
 }
 
 .list-item h3 {
@@ -89,7 +89,12 @@ nav a:hover {
 }
 
 
-
+.list-item label {
+  margin: 0;
+  color: var(--btxt);
+  font-size: 14px;
+  line-height: 1.5;
+}
 
 
 
