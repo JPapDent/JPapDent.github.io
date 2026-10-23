@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jamie Papworth-Dent</title>
+    <meta property="og:title" content="Jamie Papworth-Dent – Some Things">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+
+    <!-- KaTeX JavaScript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+
+    <!-- Auto-render extension -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                throwOnError: false
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">$\mathcal{J}\!\!\mathcal{L}$</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="right-link">Login</a>
+    </nav>
+<div class="page-content">
+    <div class="login-container" id="login-box">
+        <h2>Login</h2>
+        <form onsubmit="fakeLogin(event)">
+            <div class="form-group">
+                <label>Username / Email</label>
+                <input type="text" id="usernameInput" required>
+            </div>
+            <button type="submit">Continue</button>
+        </form>
+    <p>Log in to access no additional functionality from this website. Your personal information is stored with perfect security, as I do not know how to store it in the first place.</p>
+    </div>
+
+
+    <script>
+        // Check if user is already logged in when the page loads
+        window.onload = function() {
+            let savedUser = localStorage.getItem("loggedInUser");
+            if (savedUser) {
+                showLoggedInState(savedUser);
+            }
+        };
+
+        function fakeLogin(event) {
+            event.preventDefault(); // Stop page from reloading
+
+            // Get the value typed into the username box
+            let username = document.getElementById("usernameInput").value;
+
+            // Save it in the browser so it remembers across page navigation
+            localStorage.setItem("loggedInUser", username);
+
+            // Show the logged-in state
+            showLoggedInState(username);
+        }
+
+        function showLoggedInState(username) {
+            let box = document.getElementById("login-box");
+            box.innerHTML = `
+                <h2>Success</h2>
+                <p>You are logged in as <strong>${username}</strong>. If you would like to log in again you will first need to log out.</p>
+                <button class="logout-btn" onclick="fakeLogout()">Log Out</button>
+            `;
+        }
+
+        function fakeLogout() {
+            // Clear the saved user and reload back to login form
+            localStorage.removeItem("loggedInUser");
+            location.reload();
+        }
+    </script>
+</div>
+</body>
+</html>

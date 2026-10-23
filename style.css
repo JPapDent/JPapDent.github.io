@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0px;
+}
+
+.page-content {
+  padding: 20px;
+}
+
+/* Navigation bar */
+nav {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+.right-link {
+  margin-left: auto;
+}
+
+
+
+
+/* List container */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+/* Individual list boxes */
+.list-item {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fff;
+  transition: border-color 0.2s ease,
+  border-width 0.2s ease,
+  background-color 0.2s ease;
+}
+
+.list-item:hover {
+  border-color: #999;
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.list-item h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.list-item p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+/* Login Box Container */
+.login-container {
+  max-width: 400px;
+  margin: 0px auto;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fff;
+  transition: border-color 0.2s ease,
+  border-width 0.2s ease,
+  background-color 0.2s ease;
+}
+
+.login-container h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#message {
+margin-top: 15px;
+text-align: center;
+font-weight: bold;
+color: green;
+}
